@@ -5,7 +5,7 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import { createMcpExpressApp } from "@modelcontextprotocol/sdk/server/express.js";
 import { z } from "zod";
 
-const app = createMcpExpressApp();
+const app = createMcpExpressApp({ host: "0.0.0.0" });
 app.use(express.json());
 
 app.get("/", (req, res) => {
